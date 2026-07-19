@@ -3,8 +3,9 @@
 A fully functional catalog-style e-commerce frontend built with React, React Router, and the Context API. Built for **Week 8: Capstone Project** of The Developers Arena frontend internship.
 
 **Live catalog data:** [FakeStoreAPI](https://fakestoreapi.com)
+
 Live link :
- https://arathism.github.io/Week7_ECommerce-Website/
+https://arathism.github.io/Week7_ECommerce-Website/
 
 ---
 
