@@ -1,0 +1,123 @@
+.cart-empty {
+  text-align: center;
+  padding: var(--space-6) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cart-empty h2 { font-size: var(--step-2); }
+.cart-empty p:not(.eyebrow) { color: var(--color-ink-soft); max-width: 40ch; }
+
+.cart {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.cart__lines {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__line {
+  display: grid;
+  grid-template-columns: 64px 1fr auto auto auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.cart__thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  padding: 4px;
+  mix-blend-mode: multiply;
+}
+
+.cart__title {
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cart__price {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--color-ink-soft);
+  margin-top: 2px;
+}
+
+.cart__qty {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+}
+
+.cart__qty button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-paper-raised);
+}
+
+.cart__line-total {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cart__remove {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-stamp);
+}
+
+.cart__summary {
+  position: sticky;
+  top: 90px;
+  border: 1px solid var(--color-line-strong);
+  padding: var(--space-4);
+  background: var(--color-paper-raised);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cart__summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+}
+
+.cart__summary-amount { font-weight: 700; font-size: var(--step-1); }
+
+.cart__summary-note {
+  font-size: var(--step--1);
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 800px) {
+  .cart { grid-template-columns: 1fr; }
+  .cart__line {
+    grid-template-columns: 56px 1fr;
+    grid-template-areas:
+      "thumb info"
+      "thumb qty"
+      "thumb total-remove";
+  }
+}

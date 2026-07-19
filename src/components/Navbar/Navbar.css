@@ -1,0 +1,131 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-line-strong);
+}
+
+.navbar__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.navbar__mark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--step-1);
+  letter-spacing: 0.18em;
+}
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-1);
+}
+
+.navbar__toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--color-ink);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.navbar__links a,
+.navbar__linklike {
+  position: relative;
+  padding-bottom: 2px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--color-ink);
+}
+
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  height: 1px;
+  background: var(--color-stamp);
+  transition: right 220ms var(--ease);
+}
+
+.navbar__links a:hover::after,
+.navbar__links a.active::after {
+  right: 0;
+}
+
+.navbar__links a.active,
+.navbar__links a:hover,
+.navbar__linklike:hover {
+  color: var(--color-stamp);
+}
+
+.navbar__user {
+  color: var(--color-ink-soft);
+}
+
+.navbar__cart {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.navbar__stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 50%;
+  background: var(--color-stamp);
+  color: var(--color-white);
+  font-size: 0.72rem;
+  animation: pop 260ms var(--ease);
+}
+
+@keyframes pop {
+  0% { transform: scale(0.6); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 720px) {
+  .navbar__toggle { display: inline-flex; }
+
+  .navbar__links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-line-strong);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4) var(--space-4);
+    display: none;
+  }
+
+  .navbar__links.is-open { display: flex; }
+}

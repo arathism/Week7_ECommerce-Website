@@ -1,0 +1,9 @@
+.checkout-page {
+  padding: var(--space-4) 0 var(--space-6);
+}
+
+.checkout-page h1 {
+  font-size: var(--step-3);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+}
