@@ -3,6 +3,8 @@
 A fully functional catalog-style e-commerce frontend built with React, React Router, and the Context API. Built for **Week 8: Capstone Project** of The Developers Arena frontend internship.
 
 **Live catalog data:** [FakeStoreAPI](https://fakestoreapi.com)
+Live link :
+ https://arathism.github.io/Week7_ECommerce-Website/
 
 ---
 
@@ -10,7 +12,7 @@ A fully functional catalog-style e-commerce frontend built with React, React Rou
 
 MARQUE is a boutique product catalog that lets a shopper browse products, filter and sort them, view full product detail pages, build a persistent shopping bag, create a simulated account, and complete a validated checkout flow. It brings together everything covered across the eight-week internship — component architecture, routing, global state, API integration, form validation, performance optimization, and deployment — into a single production-ready application.
 
-**Objectives (from the Week 8 brief)**
+**Objectives (from the Week 7 brief)**
 - Recreate a real storefront's core user journey: browse → detail → bag → checkout.
 - Demonstrate clean separation of concerns between UI components, state (contexts), and data access (services/hooks).
 - Meet every technical requirement in the assignment — see §14 for the full checklist against each one.
